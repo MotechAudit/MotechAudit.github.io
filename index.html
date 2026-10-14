@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#030914">
+<meta name="description" content="MoTech Audit — smart contract and blockchain security audits.">
+<link rel="icon" href="motech-audit-logo.png" type="image/png">
+<title>MoTech Audit | Blockchain Security</title>
+<style>
+:root{--bg:#030914;--panel:#071426;--panel2:#091b31;--text:#eff7ff;--muted:#94b4d4;--line:rgba(57,157,255,.23);--blue:#168cff;--cyan:#52e7ff;--glow:rgba(0,136,255,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 80% 10%,rgba(0,105,255,.16),transparent 38%),radial-gradient(ellipse at 10% 65%,rgba(0,206,255,.07),transparent 32%),#030914}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(54,145,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(54,145,255,.13) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(3,9,20,.78);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.11em;font-size:.95rem}.brand img{width:43px;height:43px;object-fit:contain;border-radius:10px;filter:drop-shadow(0 0 12px rgba(0,145,255,.42))}
+.navlinks{display:flex;align-items:center;gap:26px;color:#c3d8ee;font-size:.86rem}.navlinks a:not(.contact):hover{color:var(--cyan);text-shadow:0 0 15px rgba(82,231,255,.55)}
+.contact,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:9px;padding:12px 18px;font-weight:800;font-size:.85rem;transition:transform .22s,box-shadow .22s,border-color .22s}
+.contact,.btn.primary{color:white;background:linear-gradient(110deg,#0869ff,#13baff);border:1px solid #36bfff;box-shadow:0 0 24px rgba(0,122,255,.25),inset 0 1px rgba(255,255,255,.25)}
+.contact:hover,.btn.primary:hover{transform:translateY(-3px);box-shadow:0 0 34px rgba(0,153,255,.55)}
+.btn.secondary{border:1px solid rgba(82,185,255,.48);background:rgba(6,22,42,.65)}.btn.secondary:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 0 22px rgba(0,145,255,.18)}
+.hero{position:relative;padding:82px 0 72px;isolation:isolate;overflow:hidden}.hero:before{content:"";position:absolute;z-index:-1;width:700px;height:700px;right:-110px;top:-210px;border-radius:50%;background:radial-gradient(circle,rgba(0,124,255,.19),transparent 67%);animation:pulse 6s ease-in-out infinite}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:45px}.eyebrow,.kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.23em;color:var(--cyan);font-weight:800}.eyebrow{display:flex;align-items:center;gap:11px}.pulse-dot{height:7px;width:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 15px var(--cyan);animation:blink 1.7s infinite}
+h1{font-size:clamp(2.7rem,6.2vw,5.45rem);line-height:.99;letter-spacing:-.065em;margin:22px 0 20px;font-weight:900}h1 .blue{color:#238fff;text-shadow:0 0 34px rgba(0,126,255,.28)}
+.subhead{font-size:1.2rem;font-weight:750;margin-bottom:10px}.subhead span{color:#71caff}.lead{color:#9fc1e1;font-size:1rem;max-width:590px;margin:0 0 26px}.actions{display:flex;gap:12px;flex-wrap:wrap}.socials{display:flex;gap:28px;margin-top:27px}.social{display:flex;align-items:center;gap:10px;color:#e5f4ff;font-size:.85rem}.social b{display:block}.social small{display:block;color:#83a9cf;font-size:.74rem}.social-icon{font-size:1.35rem;color:white}
+.hero-art{min-height:385px;position:relative;display:grid;place-items:center;perspective:800px}
+.orbit{position:absolute;border:1px solid rgba(27,149,255,.42);border-radius:50%;width:min(440px,90%);height:140px;bottom:18px;transform:rotateX(64deg);box-shadow:0 0 25px rgba(0,145,255,.15),inset 0 0 28px rgba(0,145,255,.12)}
+.orbit.two{width:min(355px,76%);height:105px;bottom:28px;border-color:rgba(82,231,255,.55);animation:orbit 12s linear infinite}
+.shield-wrap{position:relative;width:240px;height:275px;display:grid;place-items:center;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(0,133,255,.42))}
+.shield-svg{width:100%;height:100%;overflow:visible}
+.official-shield{width:300px;height:300px}
+.official-shield{width:300px;height:320px;transform-style:preserve-3d;perspective:900px}
+.official-shield .official-logo{object-fit:contain;mix-blend-mode:screen;transform:rotateY(-13deg) rotateX(4deg) translateZ(28px) scale(1.05);filter:drop-shadow(0 12px 5px rgba(0,0,0,.65)) drop-shadow(0 0 12px rgba(0,151,255,.95)) drop-shadow(0 0 32px rgba(0,105,255,.72));animation:shieldPulse 4s ease-in-out infinite}
+.shield-backplate{position:absolute;width:74%;height:76%;top:10%;left:13%;border-radius:44% 44% 48% 48%;background:linear-gradient(135deg,rgba(0,170,255,.23),rgba(0,34,90,.1));border:1px solid rgba(73,202,255,.48);transform:rotateY(-13deg) rotateX(4deg) translateZ(2px);box-shadow:inset 0 0 28px rgba(0,144,255,.3),0 0 35px rgba(0,122,255,.3)}
+.holo-platform{position:absolute;bottom:0;left:50%;width:310px;height:90px;transform:translateX(-50%) rotateX(62deg);border-radius:50%;border:4px solid rgba(0,175,255,.95);box-shadow:0 0 14px #00aaff,0 0 34px rgba(0,128,255,.8),inset 0 0 25px rgba(0,183,255,.85);background:radial-gradient(ellipse,rgba(0,190,255,.28),rgba(0,48,110,.16) 55%,transparent 70%)}
+.holo-platform i{position:absolute;inset:8px 18px;border:2px solid rgba(95,232,255,.8);border-radius:50%;box-shadow:0 0 12px rgba(0,200,255,.9)}
+.holo-platform i:nth-child(2){inset:-10px 35px;border-color:rgba(0,120,255,.6)}
+.holo-platform i:nth-child(3){inset:18px 48px;border-color:rgba(0,210,255,.7)}
+@keyframes shieldPulse{0%,100%{filter:drop-shadow(0 12px 5px rgba(0,0,0,.65)) drop-shadow(0 0 12px rgba(0,151,255,.9)) drop-shadow(0 0 28px rgba(0,105,255,.65))}50%{filter:drop-shadow(0 12px 5px rgba(0,0,0,.65)) drop-shadow(0 0 22px rgba(0,195,255,1)) drop-shadow(0 0 48px rgba(0,105,255,.9))}}
+@media(max-width:800px){.official-shield{width:230px;height:250px}.holo-platform{width:245px;height:70px}}
+.official-logo{width:100%;height:100%;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 0 14px rgba(0,160,255,.5));border-radius:8px}.shield-glow{position:absolute;inset:20%;border-radius:50%;background:#008dff;filter:blur(62px);opacity:.27}
+.float-cube{position:absolute;width:45px;height:45px;border:1px solid #4bdcff;transform:rotate(30deg) skew(-8deg);box-shadow:0 0 22px rgba(0,151,255,.45),inset 0 0 18px rgba(0,151,255,.25);animation:cube 7s ease-in-out infinite}
+.cube-a{left:8%;top:32%}.cube-b{right:8%;top:55%;width:33px;height:33px;animation-delay:-3s}.cube-c{right:22%;top:9%;width:21px;height:21px;animation-delay:-1.5s}
+.art-label{position:absolute;right:0;top:18%;border:1px solid rgba(38,164,255,.5);border-radius:10px;padding:12px 16px;background:rgba(3,17,34,.76);color:#bde9ff;font-size:.77rem;box-shadow:0 0 22px rgba(0,116,255,.12);animation:float 6s ease-in-out infinite reverse}
+.section{padding:68px 0;border-top:1px solid rgba(48,135,225,.24)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:28px}.section h2{font-size:clamp(1.8rem,3.5vw,2.7rem);letter-spacing:-.045em;line-height:1.14;margin:8px 0 0}.section h2 span{color:#4ab7ff}.section-intro{color:var(--muted);max-width:400px;font-size:.87rem;margin:0}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{position:relative;overflow:hidden;padding:23px 21px;border:1px solid rgba(36,143,255,.27);border-radius:14px;background:linear-gradient(145deg,rgba(8,25,47,.93),rgba(3,12,25,.93));transition:transform .25s,border-color .25s,box-shadow .25s}.card:before{content:"";position:absolute;inset:-1px;background:linear-gradient(120deg,transparent 20%,rgba(65,185,255,.10),transparent 70%);transform:translateX(-120%);transition:transform .6s}.card:hover{transform:translateY(-6px);border-color:rgba(65,202,255,.75);box-shadow:0 12px 40px rgba(0,87,190,.16)}.card:hover:before{transform:translateX(120%)}
+.card-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;border:1px solid rgba(52,173,255,.4);background:rgba(0,119,255,.12);color:#5ddaff;font-size:1.4rem;box-shadow:inset 0 0 18px rgba(0,135,255,.1)}.card h3{font-size:.98rem;margin:17px 0 7px}.card p{font-size:.82rem;color:#9db9d6;margin:0}
+.reports{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.report{display:flex;gap:14px;align-items:flex-start;padding:20px;border:1px solid rgba(37,145,255,.28);border-radius:13px;background:linear-gradient(140deg,rgba(8,24,45,.95),rgba(4,13,27,.95));transition:.22s}.report:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 0 26px rgba(0,115,255,.15)}.file-icon{width:42px;height:46px;flex:none;display:grid;place-items:center;border-radius:8px;color:#5de3ff;border:1px solid rgba(82,231,255,.4);background:rgba(0,122,255,.1);font-size:.68rem;font-weight:800}.report strong{font-size:.9rem;display:block}.report small{color:var(--muted);display:block;font-size:.76rem;margin-top:5px}.arrow{margin-left:auto;color:var(--cyan)}
+.note{margin-top:18px;padding:15px 17px;border:1px dashed rgba(63,164,255,.3);border-radius:10px;color:#8eaccb;font-size:.81rem}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{padding:19px;border-top:1px solid #168cff;background:linear-gradient(180deg,rgba(0,111,255,.06),transparent)}.step b{font-size:.74rem;color:var(--cyan);letter-spacing:.12em}.step h3{margin:12px 0 5px;font-size:.96rem}.step p{margin:0;color:var(--muted);font-size:.82rem}
+.cta{position:relative;overflow:hidden;padding:36px;border:1px solid rgba(42,166,255,.42);border-radius:18px;background:radial-gradient(ellipse at 100% 0,rgba(0,126,255,.18),transparent 50%),linear-gradient(140deg,#071a31,#040c19)}.cta h2{margin:8px 0 12px}.cta p{color:var(--muted);max-width:650px}.cta .actions{margin-top:20px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:#87a7c8;font-size:.8rem}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot .brand img{width:34px;height:34px}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}@keyframes pulse{0%,100%{opacity:.65;transform:scale(.95)}50%{opacity:1;transform:scale(1.06)}}@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}@keyframes orbit{to{transform:rotateX(64deg) rotateZ(360deg)}}@keyframes cube{0%,100%{transform:translateY(0) rotate(30deg) skew(-8deg)}50%{transform:translateY(-18px) rotate(65deg) skew(-8deg)}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-art{min-height:340px}.cards{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.navlinks{gap:14px}.hide-mobile{display:none}}
+@media(max-width:580px){.wrap{width:calc(100% - 28px)}nav{height:68px}.brand{font-size:.78rem;letter-spacing:.07em}.brand img{width:36px;height:36px}.navlinks{gap:10px;font-size:.77rem}.contact{padding:9px 10px}.hero{padding:54px 0 45px}.hero-art{min-height:300px}.shield-wrap{width:195px;height:225px}.official-shield{width:220px;height:220px}.art-label{right:0;top:7%;font-size:.68rem}.cards,.reports,.steps{grid-template-columns:1fr}.section{padding:52px 0}.socials{gap:18px}.cta{padding:25px}.foot{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#home" aria-label="MoTech Audit home"><img src="motech-audit-logo.png" alt="MoTech Audit official shield logo"><span>MOTECH<br><span style="font-size:.76em;color:#71caff;letter-spacing:.23em">AUDIT</span></span></a>
+<div class="navlinks"><a href="#home">Home</a><a href="#reports">Audit Reports</a><a href="#services">Services</a><a class="hide-mobile" href="#process">Methodology</a><a class="contact" href="https://x.com/MoTechAudit" target="_blank" rel="noopener noreferrer">Contact Us ↗</a></div>
+</nav></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+<div class="reveal"><div class="eyebrow"><span class="pulse-dot"></span> Blockchain Security · Smart Contract Audit · DeFi Safety</div>
+<h1>MOTECH <span class="blue">AUDIT</span></h1><div class="subhead">Building a <span>Safer Web3 Ecosystem</span></div>
+<p class="lead">Professional smart contract audits and blockchain security reviews to help projects understand risk, strengthen code, and build trust in decentralized systems.</p>
+<div class="actions"><a class="btn primary" href="#reports">View Audit Reports →</a><a class="btn secondary" href="#services">Explore Services</a></div>
+<div class="socials"><a class="social" href="https://github.com/MotechAudit" target="_blank" rel="noopener noreferrer"><span class="social-icon">◉</span><span><b>GitHub</b><small>Audit reports & code</small></span></a><a class="social" href="https://x.com/MoTechAudit" target="_blank" rel="noopener noreferrer"><span class="social-icon">𝕏</span><span><b>X (Twitter)</b><small>Latest updates</small></span></a></div></div>
+<div class="hero-art reveal" aria-label="Animated futuristic shield illustration">
+<div class="orbit"></div><div class="orbit two"></div><div class="float-cube cube-a"></div><div class="float-cube cube-b"></div><div class="float-cube cube-c"></div><div class="art-label">AUDIT<br>SECURE<br>BUILD TOGETHER</div>
+<div class="shield-wrap official-shield"><div class="shield-glow"></div><div class="shield-backplate"></div><img class="official-logo" src="motech-shield-transparent.png" alt="MOTECH AUDIT official blue shield checkmark logo"></div></div>
+</div></section>
+<section class="section" id="services"><div class="wrap"><div class="section-head"><div><div class="kicker">Our Services</div><h2>Professional <span>Security</span> Audit Services</h2></div><p class="section-intro">Blockchain, smart contracts and DeFi protocol reviews to help teams identify and understand security risks.</p></div>
+<div class="cards">
+<article class="card reveal"><div class="card-icon">⌕</div><h3>Smart Contract Audit</h3><p>Identify vulnerabilities, examine contract logic, and help strengthen protocol security.</p></article>
+<article class="card reveal"><div class="card-icon">⬡</div><h3>DeFi Security Review</h3><p>Review protocol flows, permissions, economic assumptions and cross-contract interactions.</p></article>
+<article class="card reveal"><div class="card-icon">⬢</div><h3>Blockchain Security</h3><p>Assess relevant on-chain components, integration risks and system architecture.</p></article>
+<article class="card reveal"><div class="card-icon">&lt;/&gt;</div><h3>Code Review</h3><p>Analyze implementation and document findings with actionable recommendations.</p></article>
+</div></div></section>
+<section class="section" id="reports"><div class="wrap"><div class="section-head"><div><div class="kicker">Latest Audit Reports</div><h2>Our <span>Audit Reports</span></h2></div><p class="section-intro">Transparent findings. Public reports. Build trust through security.</p></div>
+<div class="reports">
+<a class="report reveal" href="https://github.com/MotechAudit/Smart-Contract-Audits/blob/main/1INCH%20Token%20Audit%20Report.pdf" target="_blank" rel="noopener noreferrer"><span class="file-icon">PDF</span><span><strong>1inch Token</strong><small>Smart Contract Audit Report · Open on GitHub</small></span><span class="arrow">↗</span></a>
+<a class="report reveal" href="https://github.com/MotechAudit/Smart-Contract-Audits/blob/main/AAVE%20Token%20Audit%20Report.pdf" target="_blank" rel="noopener noreferrer"><span class="file-icon">PDF</span><span><strong>Aave Token</strong><small>Smart Contract Audit Report · Open on GitHub</small></span><span class="arrow">↗</span></a>
+<a class="report reveal" href="https://github.com/MotechAudit/Smart-Contract-Audits" target="_blank" rel="noopener noreferrer"><span class="file-icon">ALL</span><span><strong>More Audit Reports</strong><small>Explore the complete GitHub archive</small></span><span class="arrow">↗</span></a>
+</div><div class="note">Audit reports are hosted on GitHub. A security audit is a point-in-time review and does not guarantee that a smart contract is free from all risks. Please verify featured report filenames before publishing.</div></div></section>
+<section class="section" id="process"><div class="wrap"><div class="section-head"><div><div class="kicker">Methodology</div><h2>A clear process.<br><span>Stronger foundations.</span></h2></div><p class="section-intro">Scope and deliverables are agreed for each engagement. Reports describe the code reviewed and findings identified within that scope.</p></div>
+<div class="steps"><div class="step reveal"><b>STEP 01</b><h3>Define scope</h3><p>Confirm the codebase, contracts, chain and version under review.</p></div><div class="step reveal"><b>STEP 02</b><h3>Analyze code</h3><p>Review implementation, access controls, logic and attack surfaces.</p></div><div class="step reveal"><b>STEP 03</b><h3>Document findings</h3><p>Explain identified issues and practical remediation guidance.</p></div><div class="step reveal"><b>STEP 04</b><h3>Publish report</h3><p>Publish approved report documents through the public archive.</p></div></div></div></section>
+<section class="section"><div class="wrap"><div class="cta reveal"><div class="kicker">Start a Conversation</div><h2>Building a Web3 project?<br>Let's talk <span style="color:#42bfff">security.</span></h2><p>Reach MoTech Audit through the official X account to discuss your project and potential review scope.</p><div class="actions"><a class="btn primary" href="https://x.com/MoTechAudit" target="_blank" rel="noopener noreferrer">Contact MoTech Audit ↗</a><a class="btn secondary" href="https://github.com/MotechAudit" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><a class="brand" href="#home"><img src="motech-audit-logo.png" alt="MoTech Audit official shield logo"><span>MOTECH AUDIT</span></a><span>© <span id="year"></span> MoTech Audit</span><span><a href="https://github.com/MotechAudit">GitHub</a> · <a href="https://x.com/MoTechAudit">X / Twitter</a></span></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body></html>
