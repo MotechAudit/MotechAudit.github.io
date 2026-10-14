@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#050c18"><meta name="description" content="MoTech Audit smart contract security, token risk analysis and Web3 security intelligence."><title>Insights | MoTech Audit</title><link rel="stylesheet" href="assets/site.css"></head><body><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="MoTech Audit logo"><span>MOTECH AUDIT<small>SMART CONTRACT SECURITY</small></span></a><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">Menu</span></button><nav class="links" id="site-navigation"><a class="" href="index.html">Overview</a><a class="" href="services.html">Services</a><a class="" href="process.html">Methodology</a><a class="" href="scanner.html">Security Tools</a><a class="" href="reports.html">Reports</a><a class="active" href="insights.html">Insights</a><a class="" href="about.html">About</a><a class="nav-cta" href="contact.html">Request an Audit ↗</a></nav></div></header><div class="page-intro"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> / Insights</div><div class="eyebrow">Insights</div><h1>Security intelligence & research</h1><p class="lead">A dedicated editorial space for vulnerability analysis, incident learnings and practical defensive guidance. Only sourced, dated items should be published as active intelligence.</p></div></div><main class="content"><div class="wrap"><div class="grid three"><article class="card"><span class="pill">RESEARCH FORMAT</span><h3 style="margin-top:15px">Exploit analysis</h3><p>Explain the failure mode, assumptions, impact and defensive lessons behind a publicly documented exploit.</p></article><article class="card"><span class="pill">DEVELOPER GUIDE</span><h3 style="margin-top:15px">Secure contract patterns</h3><p>Practical guidance on access control, reentrancy, oracle handling, upgradeability and invariant testing.</p></article><article class="card"><span class="pill">THREAT MONITORING</span><h3 style="margin-top:15px">Incident briefings</h3><p>Summarize verified incidents with original source links, event timestamps and clear confidence labels.</p></article></div><div class="card" style="margin-top:20px"><div class="eyebrow">Editorial standard</div><h3>Source first. Timestamp every alert.</h3><p>Before publishing incident updates, include the original source, affected protocol or address, event time, last-updated time and any uncertainty. Do not label a feed “live” unless it is backed by an active data integration.</p></div></div></main><footer class="footer premium-footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="footer-topline">
+      <span class="footer-kicker"><span class="footer-live-dot"></span> INDEPENDENT WEB3 SECURITY</span>
+      <span class="footer-top-note">Clarity in code. Confidence in every contract.</span>
+    </div>
+    <div class="premium-footgrid">
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="index.html" aria-label="MoTech Audit home">
+          <img src="assets/logo.png" alt="MoTech Audit logo">
+          <span>MOTECH AUDIT<small>SMART CONTRACT SECURITY</small></span>
+        </a>
+        <p>Independent smart contract security and Web3 risk intelligence, built to help teams make better-informed decisions.</p>
+        <a class="footer-contact-link" href="contact.html">Discuss your project <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-link-col">
+        <h4>Services</h4>
+        <a href="services.html">Smart Contract Audits</a>
+        <a href="process.html">Our Methodology</a>
+        <a href="contact.html">Request an Audit</a>
+      </div>
+      <div class="footer-link-col">
+        <h4>Explore</h4>
+        <a href="scanner.html">Token Security Scanner</a>
+        <a href="reports.html">Audit Reports</a>
+        <a href="insights.html">Threat Intelligence</a>
+        <a href="about.html">About MoTech</a>
+      </div>
+      <div class="footer-link-col footer-connect-col">
+        <h4>Connect</h4>
+        <p>Have a protocol to secure or a question about your project?</p>
+        <a href="contact.html">Contact the team <span aria-hidden="true">↗</span></a>
+        <div class="footer-socials">
+          <a href="https://github.com/MotechAudit" target="_blank" rel="noreferrer" aria-label="GitHub">GH <span>GitHub ↗</span></a>
+          <a href="https://x.com/MoTechAudit" target="_blank" rel="noreferrer" aria-label="X / Twitter">X <span>Follow on X ↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-trust-row">
+      <span><i aria-hidden="true">✓</i> Independent security services</span>
+      <span><i aria-hidden="true">◈</i> Web3 risk intelligence</span>
+      <span><i aria-hidden="true">⌁</i> Built for a safer on-chain future</span>
+    </div>
+    <div class="copyright premium-copyright">
+      <span>© 2026 MoTech Audit. All rights reserved.</span>
+      <span>Independent services. No third-party endorsement implied.</span>
+    </div>
+  </div>
+</footer><script>
+// Progressive scroll reveals; content remains visible if scripting is unavailable.
+(()=>{document.documentElement.classList.add('reveal-ready');const targets='section,.card,.workspace-card,.panel,.scan-home,.ticker-shell,.page-intro,.result,.stat,.feature-img,.form-grid';document.querySelectorAll(targets).forEach((el,i)=>{if(el.closest('footer'))return;el.classList.add('reveal');});if(!('IntersectionObserver'in window)){document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));return;}const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -35px 0px'});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));})();
+</script>
+
+<script>
+/* Mobile navigation accessibility */
+(function(){
+  var toggle=document.querySelector('.mobile-menu-toggle');
+  var menu=document.querySelector('#site-navigation');
+  if(!toggle||!menu)return;
+  function closeMenu(){menu.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}
+  toggle.addEventListener('click',function(){
+    var open=!menu.classList.contains('is-open');
+    menu.classList.toggle('is-open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+  });
+  menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',closeMenu);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  window.addEventListener('resize',function(){if(window.innerWidth>1000)closeMenu();});
+})();
+</script>
+</body></html>

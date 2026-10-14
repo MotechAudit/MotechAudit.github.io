@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#050c18"><meta name="description" content="MoTech Audit smart contract security, token risk analysis and Web3 security intelligence."><title>Contact | MoTech Audit</title><link rel="stylesheet" href="assets/site.css"></head><body><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="MoTech Audit logo"><span>MOTECH AUDIT<small>SMART CONTRACT SECURITY</small></span></a><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">Menu</span></button><nav class="links" id="site-navigation"><a class="" href="index.html">Overview</a><a class="" href="services.html">Services</a><a class="" href="process.html">Methodology</a><a class="" href="scanner.html">Security Tools</a><a class="" href="reports.html">Reports</a><a class="" href="insights.html">Insights</a><a class="" href="about.html">About</a><a class="nav-cta" href="contact.html">Request an Audit ↗</a></nav></div></header><div class="page-intro"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> / Contact</div><div class="eyebrow">Contact</div><h1>Tell us what you are building</h1><p class="lead">Share the project context, network and timeline. This form opens an email draft in your email app; it does not store submissions on this website.</p></div></div><main class="content"><div class="wrap two-col"><div class="card"><form id="contactForm"><div class="form-grid"><div class="field"><label for="name">YOUR NAME *</label><input id="name" required placeholder="Name"></div><div class="field"><label for="email">WORK EMAIL *</label><input id="email" type="email" required placeholder="you@project.com"></div><div class="field"><label for="project">PROJECT / COMPANY *</label><input id="project" required placeholder="Project name"></div><div class="field"><label for="network">NETWORK</label><select id="network"><option>Ethereum</option><option>BNB Smart Chain</option><option>Base</option><option>Arbitrum</option><option>Optimism</option><option>Solana</option><option>Other / multi-chain</option></select></div><div class="field"><label for="service">SERVICE NEEDED *</label><select id="service" required><option value="">Select a service</option><option>Smart Contract Audit</option><option>DeFi / Protocol Review</option><option>Token Risk Review</option><option>Remediation / Retesting</option><option>Incident Support</option><option>Security Advisory</option></select></div><div class="field"><label for="timeline">TARGET TIMELINE</label><select id="timeline"><option>Exploring / flexible</option><option>Within 2 weeks</option><option>Within 1 month</option><option>1–3 months</option><option>Urgent incident</option></select></div><div class="field full"><label for="details">SCOPE & CONTEXT *</label><textarea id="details" required placeholder="Repository or contract address (public only), key features, audit scope, target launch date…"></textarea></div><div class="field full"><button class="btn" type="submit">Prepare audit inquiry ↗</button><div id="formStatus" class="status"></div></div></div></form></div><aside class="sidebox card"><div class="eyebrow">What helps us scope</div><h3>Useful details</h3><div class="checklist"><div class="check"><b>✓</b><span>Public repository or verified contract addresses</span></div><div class="check"><b>✓</b><span>Protocol overview and key user flows</span></div><div class="check"><b>✓</b><span>Target release date and preferred review window</span></div><div class="check"><b>✓</b><span>Known concerns or previous findings</span></div></div><div class="notice">Never include seed phrases, private keys, credentials or confidential data in this form.</div><p style="font-size:12px;color:var(--muted)">Social channels: <a href="https://github.com/MotechAudit" target="_blank" rel="noreferrer">GitHub</a> · <a href="https://x.com/MoTechAudit" target="_blank" rel="noreferrer">X</a></p></aside></div></main><script>document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const val=id=>document.getElementById(id).value.trim();const subject=encodeURIComponent('Audit inquiry — '+val('project'));const body=encodeURIComponent('Name: '+val('name')+'\nEmail: '+val('email')+'\nProject: '+val('project')+'\nNetwork: '+val('network')+'\nService: '+val('service')+'\nTimeline: '+val('timeline')+'\n\nScope and context:\n'+val('details'));document.getElementById('formStatus').textContent='Opening your email app with the inquiry prepared. Confirm the recipient address before sending.';window.location.href='mailto:contact@motechaudit.com?subject='+subject+'&body='+body;});</script><footer class="footer premium-footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="footer-topline">
+      <span class="footer-kicker"><span class="footer-live-dot"></span> INDEPENDENT WEB3 SECURITY</span>
+      <span class="footer-top-note">Clarity in code. Confidence in every contract.</span>
+    </div>
+    <div class="premium-footgrid">
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="index.html" aria-label="MoTech Audit home">
+          <img src="assets/logo.png" alt="MoTech Audit logo">
+          <span>MOTECH AUDIT<small>SMART CONTRACT SECURITY</small></span>
+        </a>
+        <p>Independent smart contract security and Web3 risk intelligence, built to help teams make better-informed decisions.</p>
+        <a class="footer-contact-link" href="contact.html">Discuss your project <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-link-col">
+        <h4>Services</h4>
+        <a href="services.html">Smart Contract Audits</a>
+        <a href="process.html">Our Methodology</a>
+        <a href="contact.html">Request an Audit</a>
+      </div>
+      <div class="footer-link-col">
+        <h4>Explore</h4>
+        <a href="scanner.html">Token Security Scanner</a>
+        <a href="reports.html">Audit Reports</a>
+        <a href="insights.html">Threat Intelligence</a>
+        <a href="about.html">About MoTech</a>
+      </div>
+      <div class="footer-link-col footer-connect-col">
+        <h4>Connect</h4>
+        <p>Have a protocol to secure or a question about your project?</p>
+        <a href="contact.html">Contact the team <span aria-hidden="true">↗</span></a>
+        <div class="footer-socials">
+          <a href="https://github.com/MotechAudit" target="_blank" rel="noreferrer" aria-label="GitHub">GH <span>GitHub ↗</span></a>
+          <a href="https://x.com/MoTechAudit" target="_blank" rel="noreferrer" aria-label="X / Twitter">X <span>Follow on X ↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-trust-row">
+      <span><i aria-hidden="true">✓</i> Independent security services</span>
+      <span><i aria-hidden="true">◈</i> Web3 risk intelligence</span>
+      <span><i aria-hidden="true">⌁</i> Built for a safer on-chain future</span>
+    </div>
+    <div class="copyright premium-copyright">
+      <span>© 2026 MoTech Audit. All rights reserved.</span>
+      <span>Independent services. No third-party endorsement implied.</span>
+    </div>
+  </div>
+</footer><script>
+// Progressive scroll reveals; content remains visible if scripting is unavailable.
+(()=>{document.documentElement.classList.add('reveal-ready');const targets='section,.card,.workspace-card,.panel,.scan-home,.ticker-shell,.page-intro,.result,.stat,.feature-img,.form-grid';document.querySelectorAll(targets).forEach((el,i)=>{if(el.closest('footer'))return;el.classList.add('reveal');});if(!('IntersectionObserver'in window)){document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));return;}const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -35px 0px'});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));})();
+</script>
+
+<script>
+/* Mobile navigation accessibility */
+(function(){
+  var toggle=document.querySelector('.mobile-menu-toggle');
+  var menu=document.querySelector('#site-navigation');
+  if(!toggle||!menu)return;
+  function closeMenu(){menu.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}
+  toggle.addEventListener('click',function(){
+    var open=!menu.classList.contains('is-open');
+    menu.classList.toggle('is-open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+  });
+  menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',closeMenu);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  window.addEventListener('resize',function(){if(window.innerWidth>1000)closeMenu();});
+})();
+</script>
+</body></html>

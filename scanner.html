@@ -1,0 +1,107 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#050c18"><meta name="description" content="MoTech Audit smart contract security, token risk analysis and Web3 security intelligence."><title>Security Tools | MoTech Audit</title><link rel="stylesheet" href="assets/site.css"></head><body><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="MoTech Audit logo"><span>MOTECH AUDIT<small>SMART CONTRACT SECURITY</small></span></a><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">Menu</span></button><nav class="links" id="site-navigation"><a class="" href="index.html">Overview</a><a class="" href="services.html">Services</a><a class="" href="process.html">Methodology</a><a class="active" href="scanner.html">Security Tools</a><a class="" href="reports.html">Reports</a><a class="" href="insights.html">Insights</a><a class="" href="about.html">About</a><a class="nav-cta" href="contact.html">Request an Audit ↗</a></nav></div></header><main class="token-scanner-page">
+<section class="scanner-heading"><div><div class="eyebrow">ON-CHAIN RISK ANALYSIS</div><h1>Token <span>Security Scanner</span></h1></div><p>Check honeypot signals and token security data before interacting with a contract.</p></section>
+<div class="scanner-layout">
+<section class="scanner-entry">
+<div class="eyebrow">LIVE SECURITY CHECK</div><h2>Scan a Token</h2>
+<p class="scanner-copy">Enter a token contract address and choose a supported network. The scanner requests data from third-party security APIs; results depend on API availability and chain coverage.</p>
+<div class="field"><label for="chain">Blockchain Network</label><select id="chain"><option value="56">BNB Smart Chain</option><option value="1">Ethereum</option><option value="8453">Base</option></select></div>
+<div class="field"><label for="address">Token Contract Address</label><input id="address" placeholder="0x..." autocomplete="off"></div>
+<div class="scanner-actions"><button class="btn" id="scan">Run Security Scan ↗</button><button class="btn secondary" id="clear-scan" type="button">Clear</button></div>
+<p class="scanner-disclaimer">Security signals are informational, not a guarantee of safety or a substitute for a professional audit. Never connect a wallet or share a seed phrase to scan a token.</p>
+<div id="status" class="status" role="status">No scan has been run yet.</div>
+</section>
+<section class="scanner-results" id="scanner-results" aria-live="polite">
+<div class="scanner-ready-mark">⌁</div><h3 id="result-title">READY TO ANALYZE</h3>
+<p id="result-summary">Token risk flags · Ownership controls · Liquidity & trading signals</p>
+<p id="result-prompt">Enter an address to begin.</p>
+<div class="scanner-result-grid">
+<article class="result"><h4>Trading Risk</h4><div class="resultrow"><span>Honeypot flag</span><strong id="hp">Not checked</strong></div><div class="resultrow"><span>Buy / sell tax</span><strong id="tax">—</strong></div><div class="resultrow"><span>Can sell all</span><strong id="sellall">—</strong></div><div class="resultrow"><span>Blacklist</span><strong id="blacklist">—</strong></div><small>Source: GoPlus Security</small></article>
+<article class="result"><h4>Automated Risk Signals</h4><div class="resultrow"><span>Risk indicators</span><strong id="gp">Not checked</strong></div><div class="resultrow"><span>Owner privileges</span><strong id="perm">—</strong></div><div class="resultrow"><span>Mintable</span><strong id="mintable">—</strong></div><div class="resultrow"><span>Proxy / hidden owner</span><strong id="proxy">—</strong></div><div class="resultrow"><span>Open source</span><strong id="source">—</strong></div><div class="resultrow"><span>Token name / symbol</span><strong id="tokenname">—</strong></div><small>Source: GoPlus Security · On-chain token security data</small></article>
+</div>
+<div class="scanner-audit-cta" id="scanner-audit-cta"><strong>Need a professional audit report?</strong><p>This scanner provides a basic automated check only. Contact MoTech Audit to discuss a paid, in-depth smart contract audit and formal report.</p><a class="btn" href="contact.html">Contact MoTech Audit ↗</a></div>
+</section>
+</div></main>
+<style>
+.token-scanner-page{max-width:1600px;margin:0 auto;padding:44px 28px 72px}.scanner-heading{display:flex;justify-content:space-between;align-items:center;gap:36px;margin-bottom:32px}.scanner-heading .eyebrow,.scanner-entry>.eyebrow{color:#00c9f5;font-weight:800;letter-spacing:.28em}.scanner-heading h1{font-size:clamp(32px,3vw,44px);line-height:1.12;margin:10px 0 0;letter-spacing:-.04em}.scanner-heading h1 span{color:#0aa8ff}.scanner-heading>p{max-width:420px;color:#b6d1e5;font-size:17px;font-weight:550;margin:0}.scanner-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:30px;align-items:start}.scanner-entry,.scanner-results{border:1px solid #006ca9;border-radius:24px;background:linear-gradient(135deg,rgba(4,24,45,.94),rgba(2,10,24,.97));box-shadow:inset 0 0 0 1px rgba(0,174,255,.04)}.scanner-entry{padding:34px;min-height:650px;display:flex;flex-direction:column}.scanner-entry h2{font-size:32px;letter-spacing:-.035em;margin:10px 0 16px}.scanner-copy{font-size:17px;line-height:1.7;color:#b6d1e5;margin:0 0 20px}.scanner-entry .field{margin:0 0 22px}.scanner-entry .field label{display:block;font-size:16px;font-weight:750;color:#b9d7ea;margin-bottom:9px;text-transform:none;letter-spacing:0}.scanner-entry select,.scanner-entry input{width:100%;min-height:48px;background:#020d1c;border:1px solid #006ba8;border-radius:12px;color:#edf7ff;padding:12px 14px;font:inherit}.scanner-entry input{min-height:66px;margin-top:1px}.scanner-actions{display:flex;gap:14px;align-items:center;margin-top:0}.scanner-actions .btn{min-height:62px;padding:0 30px;font-size:17px}.scanner-actions .secondary{background:#020b18;border:1px solid #00b9ef}.scanner-disclaimer{margin-top:auto;padding-top:36px;color:#93b2c9;font-size:14px;line-height:1.8}.scanner-entry .status{color:#89b6d3;font-size:13px;margin-top:10px}.scanner-results{min-height:442px;padding:42px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.scanner-ready-mark{font-size:40px;color:#00c8f5;font-weight:900;text-shadow:0 0 24px #008fd8;margin-bottom:14px}.scanner-results>h3{font-size:19px;color:#8ab6d4;margin:0 0 6px}.scanner-results>p{color:#86adca;margin:3px 0;font-size:16px;line-height:1.55}.scanner-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;margin-top:26px;text-align:left}.scanner-result-grid .result{border:1px solid rgba(0,147,220,.35);background:rgba(2,13,28,.8);border-radius:14px;padding:18px}.scanner-result-grid h4{margin:0 0 14px;color:#e5f5ff}.scanner-result-grid .resultrow{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid rgba(100,170,210,.15);font-size:13px}.scanner-result-grid .resultrow strong{color:#9fe4ff;text-align:right}.scanner-result-grid small{display:block;color:#7fa4be;margin-top:12px}.scanner-results:has(.scanner-result-grid) .scanner-result-grid{display:grid}.scanner-audit-cta{display:none;width:100%;margin-top:18px;border:1px solid rgba(0,190,245,.35);border-radius:14px;padding:20px;background:rgba(0,100,160,.1);text-align:left}.scanner-audit-cta strong{color:#e5f5ff}.scanner-audit-cta p{font-size:14px!important;color:#9cbdd2!important;margin:8px 0 14px!important}.scanner-audit-cta .btn{display:inline-flex;margin:0;padding:11px 17px;min-height:0;font-size:14px}.scanner-results:has(.scanner-result-grid) .scanner-audit-cta{display:block}
+@media(max-width:850px){.token-scanner-page{padding:30px 18px 50px}.scanner-heading{align-items:flex-start;flex-direction:column;gap:12px}.scanner-layout{grid-template-columns:1fr}.scanner-entry{min-height:0;padding:25px}.scanner-results{min-height:340px;padding:30px 18px}.scanner-result-grid{grid-template-columns:1fr}.scanner-disclaimer{padding-top:28px}}
+</style>
+<script>
+const $=id=>document.getElementById(id);const params=new URLSearchParams(location.search);if(params.get('chain'))$('chain').value=params.get('chain');if(params.get('address'))$('address').value=params.get('address');
+const yn=v=>String(v)==='1'?'Yes / flagged':String(v)==='0'?'No flag':'Not provided';
+$('scan').addEventListener('click',async()=>{const address=$('address').value.trim(),chain=$('chain').value;if(!/^0x[a-fA-F0-9]{40}$/.test(address)){ $('status').textContent='Enter a valid 0x EVM contract address.';return;} $('status').textContent='Requesting GoPlus Security data…';$('result-title').textContent='ANALYZING TOKEN';$('result-prompt').textContent='Checking available preliminary risk signals from GoPlus Security…';$('hp').textContent='Checking…';$('tax').textContent='—';$('gp').textContent='Checking…';$('perm').textContent='—';['sellall','blacklist','mintable','proxy','source','tokenname'].forEach(id=>$(id).textContent='—');
+try{const r=await fetch('https://api.gopluslabs.io/api/v1/token_security/'+chain+'?contract_addresses='+encodeURIComponent(address));if(!r.ok)throw Error('GoPlus API returned '+r.status);const d=await r.json();const token=d?.result?.[address.toLowerCase()]||Object.values(d?.result||{})[0];if(!token)throw Error(d?.message||'No token result returned');const keys=['is_honeypot','cannot_sell_all','is_blacklisted','is_mintable','owner_change_balance','hidden_owner','is_proxy','is_open_source'];const risks=keys.filter(k=>String(token[k])==='1');$('hp').textContent=yn(token.is_honeypot);const buy=token.buy_tax,sell=token.sell_tax;$('tax').textContent=(buy!=null&&sell!=null)?(Number(buy)*100).toFixed(2)+'% / '+(Number(sell)*100).toFixed(2)+'%':(buy!=null&&sell!=null?buy+' / '+sell:'Not provided');$('sellall').textContent=yn(token.cannot_sell_all);$('blacklist').textContent=yn(token.is_blacklisted);$('gp').textContent=risks.length?risks.length+' flagged signal(s)':'No listed flags';$('perm').textContent=[String(token.owner_change_balance)==='1'?'Owner can change balance':null,String(token.hidden_owner)==='1'?'Hidden owner flagged':null].filter(Boolean).join('; ')||'No listed owner flags';$('mintable').textContent=yn(token.is_mintable);$('proxy').textContent='Proxy: '+yn(token.is_proxy)+'; hidden owner: '+yn(token.hidden_owner);$('source').textContent=yn(token.is_open_source);$('tokenname').textContent=[token.token_name,token.token_symbol].filter(Boolean).join(' / ')||'Not provided';$('result-title').textContent='BASIC TOKEN CHECK COMPLETE';$('result-prompt').textContent='These automated signals are a preliminary check, not a full audit. “Not provided” does not mean safe.';$('status').textContent='GoPlus Security report received for '+address+'. Updated '+new Date().toLocaleString()+'.';}
+catch(e){$('result-title').textContent='REPORT UNAVAILABLE';$('result-prompt').textContent='GoPlus did not return usable data. Check the address, selected chain, API availability or rate limits, then try again.';$('status').textContent='Scan unavailable: '+e.message;['hp','gp'].forEach(id=>$(id).textContent='Unavailable');}}
+);$('clear-scan').addEventListener('click',()=>{ $('address').value='';$('status').textContent='Cleared. Enter an address to begin.';$('result-title').textContent='READY TO ANALYZE';$('result-summary').textContent='Basic token risk screening · Preliminary signals only';$('result-prompt').textContent='Enter an address to begin.';['hp','gp'].forEach(id=>$(id).textContent='Not checked');['tax','perm','sellall','blacklist','mintable','proxy','source','tokenname'].forEach(id=>$(id).textContent='—');});
+</script><footer class="footer premium-footer">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="footer-topline">
+      <span class="footer-kicker"><span class="footer-live-dot"></span> INDEPENDENT WEB3 SECURITY</span>
+      <span class="footer-top-note">Clarity in code. Confidence in every contract.</span>
+    </div>
+    <div class="premium-footgrid">
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="index.html" aria-label="MoTech Audit home">
+          <img src="assets/logo.png" alt="MoTech Audit logo">
+          <span>MOTECH AUDIT<small>SMART CONTRACT SECURITY</small></span>
+        </a>
+        <p>Independent smart contract security and Web3 risk intelligence, built to help teams make better-informed decisions.</p>
+        <a class="footer-contact-link" href="contact.html">Discuss your project <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-link-col">
+        <h4>Services</h4>
+        <a href="services.html">Smart Contract Audits</a>
+        <a href="process.html">Our Methodology</a>
+        <a href="contact.html">Request an Audit</a>
+      </div>
+      <div class="footer-link-col">
+        <h4>Explore</h4>
+        <a href="scanner.html">Token Security Scanner</a>
+        <a href="reports.html">Audit Reports</a>
+        <a href="insights.html">Threat Intelligence</a>
+        <a href="about.html">About MoTech</a>
+      </div>
+      <div class="footer-link-col footer-connect-col">
+        <h4>Connect</h4>
+        <p>Have a protocol to secure or a question about your project?</p>
+        <a href="contact.html">Contact the team <span aria-hidden="true">↗</span></a>
+        <div class="footer-socials">
+          <a href="https://github.com/MotechAudit" target="_blank" rel="noreferrer" aria-label="GitHub">GH <span>GitHub ↗</span></a>
+          <a href="https://x.com/MoTechAudit" target="_blank" rel="noreferrer" aria-label="X / Twitter">X <span>Follow on X ↗</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-trust-row">
+      <span><i aria-hidden="true">✓</i> Independent security services</span>
+      <span><i aria-hidden="true">◈</i> Web3 risk intelligence</span>
+      <span><i aria-hidden="true">⌁</i> Built for a safer on-chain future</span>
+    </div>
+    <div class="copyright premium-copyright">
+      <span>© 2026 MoTech Audit. All rights reserved.</span>
+      <span>Independent services. No third-party endorsement implied.</span>
+    </div>
+  </div>
+</footer><script>
+// Progressive scroll reveals; content remains visible if scripting is unavailable.
+(()=>{document.documentElement.classList.add('reveal-ready');const targets='section,.card,.workspace-card,.panel,.scan-home,.ticker-shell,.page-intro,.result,.stat,.feature-img,.form-grid';document.querySelectorAll(targets).forEach((el,i)=>{if(el.closest('footer'))return;el.classList.add('reveal');});if(!('IntersectionObserver'in window)){document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));return;}const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -35px 0px'});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));})();
+</script>
+
+<script>
+/* Mobile navigation accessibility */
+(function(){
+  var toggle=document.querySelector('.mobile-menu-toggle');
+  var menu=document.querySelector('#site-navigation');
+  if(!toggle||!menu)return;
+  function closeMenu(){menu.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');}
+  toggle.addEventListener('click',function(){
+    var open=!menu.classList.contains('is-open');
+    menu.classList.toggle('is-open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+  });
+  menu.querySelectorAll('a').forEach(function(link){link.addEventListener('click',closeMenu);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  window.addEventListener('resize',function(){if(window.innerWidth>1000)closeMenu();});
+})();
+</script>
+</body></html>

@@ -1,21 +1,19 @@
-# MoTech Audit — Futuristic Website
+# MoTech Audit — Premium Visual Redesign
 
-A responsive static website with animated neon-blue styling, a CSS/SVG decorative shield, floating cubes, glowing grids, hover effects, and scroll-reveal transitions.
+Multi-page static website with the original MoTech 3D blue shield asset preserved. The visual enhancement adds a subtle animated technical grid, blue ambient lighting, holographic shield float, glass-style panels, luminous hover states, scroll reveal transitions, and responsive layouts. Respects `prefers-reduced-motion`.
 
-## Brand logo
-The site uses the GitHub profile image URL `https://github.com/MotechAudit.png` in the header, footer, and favicon. The large glowing shield in the hero is a decorative visual, not a replacement for the official logo.
+## Pages
+- `index.html` — Overview, live public Binance market pulse, quick token scan, service/workflow summaries, contact entry.
+- `services.html` — Audit services.
+- `process.html` — Audit methodology.
+- `scanner.html` — Dedicated token scanner.
+- `reports.html` — Report information.
+- `insights.html` — Security intelligence.
+- `about.html` — Company.
+- `contact.html` — Project inquiry.
 
-## Publish
-1. Create or open the website repository under the correct GitHub account.
-2. Upload `index.html` to the repository root.
-3. Open Settings → Pages.
-4. Select Deploy from a branch, `main`, `/ (root)`, then Save.
-5. Wait for GitHub Pages to confirm the deployment URL.
+## Run
+Open `index.html` locally or deploy the folder to a static host such as GitHub Pages. For local browser testing, a simple static HTTP server is recommended.
 
-Before publishing, verify that the featured PDF report links match the actual files in the audit repository. This website does not automatically sync new reports.
-
-
-Official brand asset: `motech-audit-logo.png` (used in the header, hero, favicon, and footer). Keep this file alongside `index.html` when publishing.
-
-
-3D hero shield uses `motech-shield-transparent.png`, extracted from the supplied official logo artwork. Keep both PNG assets next to `index.html` when publishing.
+## Important
+Market data and token security checks depend on third-party endpoints, browser CORS policies, network coverage and API availability. Verify on the deployment domain. The contact form is static and must be connected to a real mail/form backend if submissions should be delivered and stored. Do not treat scanner output as a full audit or guarantee of safety.
