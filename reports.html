@@ -1,4 +1,59 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#050c18"><meta name="description" content="MoTech Audit smart contract security, token risk analysis and Web3 security intelligence."><title>Reports | MoTech Audit</title><link rel="stylesheet" href="assets/site.css"></head><body><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="MoTech Audit logo"><span>MOTECH AUDIT<small>SMART CONTRACT SECURITY</small></span></a><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">Menu</span></button><nav class="links" id="site-navigation"><a class="" href="index.html">Overview</a><a class="" href="services.html">Services</a><a class="" href="process.html">Methodology</a><a class="" href="scanner.html">Security Tools</a><a class="active" href="reports.html">Reports</a><a class="" href="insights.html">Insights</a><a class="" href="about.html">About</a><a class="nav-cta" href="contact.html">Request an Audit ↗</a></nav></div></header><div class="page-intro"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> / Reports</div><div class="eyebrow">Reports</div><h1>Audit reports & verification</h1><p class="lead">Public reports should be traceable to a real project, repository and publication decision. This page is structured for verified reports rather than illustrative client logos or invented audit counts.</p></div></div><main class="content"><div class="wrap"><div class="card"><div class="eyebrow">Public report register</div><h2 style="margin:8px 0 10px">Verified reports will appear here.</h2><p style="color:var(--muted)">No public audit reports have been published in this starter package. Add only reports approved for public release, with a stable URL, version, scope and publication date.</p><span class="pill">NO DEMO CLIENTS OR FABRICATED RECORDS</span></div><div class="grid three" style="margin-top:18px"><div class="card"><div class="iconbox">PDF</div><h3>Full report</h3><p>Scope, methodology, findings, severity, limitations and remediation recommendations.</p></div><div class="card"><div class="iconbox">FIX</div><h3>Fix verification</h3><p>Clearly distinguish initial findings from fixes that were retested and verified.</p></div><div class="card"><div class="iconbox">ID</div><h3>Report identity</h3><p>Use a unique report ID, repository or deployment reference, and publication date.</p></div></div><div class="card" style="margin-top:18px"><h3>Have a report to verify?</h3><p>Contact MoTech with the report ID or official URL. Verification is only possible where a trustworthy source record exists.</p><a class="btn secondary" href="contact.html" style="margin-top:16px">Contact the team ↗</a></div></div></main><footer class="footer premium-footer">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#050c18"><meta name="description" content="MoTech Audit smart contract security, token risk analysis and Web3 security intelligence."><title>Reports | MoTech Audit</title><link rel="stylesheet" href="assets/site.css"></head><body><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="MoTech Audit logo"><span>MOTECH AUDIT<small>SMART CONTRACT SECURITY</small></span></a><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">Menu</span></button><nav class="links" id="site-navigation"><a class="" href="index.html">Overview</a><a class="" href="services.html">Services</a><a class="" href="process.html">Methodology</a><a class="" href="scanner.html">Security Tools</a><a class="active" href="reports.html">Reports</a><a class="" href="insights.html">Insights</a><a class="" href="about.html">About</a><a class="nav-cta" href="contact.html">Request an Audit ↗</a></nav></div></header><div class="page-intro"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> / Reports</div><div class="eyebrow">Reports</div><h1>Audit reports & verification</h1><p class="lead">Public reports should be traceable to a real project, repository and publication decision. This page is structured for verified reports rather than illustrative client logos or invented audit counts.</p></div></div><main class="content">
+<div class="wrap">
+  <div class="card reports-archive-card">
+    <div class="eyebrow">PUBLIC REPORT REGISTER</div>
+    <h2 style="margin:8px 0 10px">Smart Contract Audit Reports</h2>
+    <p style="color:var(--muted)">Browse our public historical audit reports. Search by project or filename. Reports open in a new tab from the original GitHub archive.</p>
+    <p><a class="btn secondary" href="https://github.com/MotechAudit/Smart-Contract-Audits" target="_blank" rel="noopener noreferrer">Open full report archive ↗</a></p>
+    <label for="report-search">Search reports</label>
+    <input id="report-search" type="search" placeholder="Search by project or report name…" autocomplete="off" style="display:block;width:100%;box-sizing:border-box;padding:13px 15px;margin:10px 0 18px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:inherit;font:inherit">
+    <p id="report-status" aria-live="polite" style="color:var(--muted)">Loading reports…</p>
+    <div id="report-list" class="report-list"></div>
+  </div>
+  <div class="card" style="margin-top:18px"><h3>Have a report to verify?</h3><p>Contact MoTech with the report ID or official URL. Verification is only possible where a trustworthy source record exists.</p><a class="btn secondary" href="contact.html" style="margin-top:16px">Contact the team ↗</a></div>
+</div>
+</main>
+<style>
+/* Keep the same site design on phones, with a single-column report list and comfortable touch targets. */
+.reports-archive-card{min-width:0;}
+.report-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.report-item{min-width:0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);}
+.report-item a{display:block;font-weight:600;overflow-wrap:anywhere;line-height:1.5;}
+.report-item small{display:block;color:var(--muted);margin-top:7px;}
+@media(max-width:700px){.report-list{grid-template-columns:minmax(0,1fr);}.reports-archive-card{padding:clamp(16px,4vw,24px);}.reports-archive-card h2{font-size:clamp(1.25rem,5vw,1.8rem);}}
+</style>
+<script>
+(function () {
+  const repo = 'MotechAudit/Smart-Contract-Audits';
+  const search = document.getElementById('report-search');
+  const list = document.getElementById('report-list');
+  const status = document.getElementById('report-status');
+  // Static index avoids GitHub API rate limits and network loading failures.
+  const names = ["1INCH Token Audit Report.pdf", "AAVE Token Audit Report.pdf", "ALLBRIDGE TOKEN AUDIT REPORT .pdf", "ARATA TOKEN AUDIT REPORT.pdf", "ASI FI LTD TOKEN AUDIT REPORT.pdf", "ASPO WORLD TOKEN AUDIT REPORT.pdf", "AVNRICH TOKEN SMART CONTRACT AUDIT REPORT.pdf", "BARREL TOKEN AUDIT REPORT.pdf", "BEMIL TOKEN AUDIT REPORT.pdf", "BROKOLI TOKEN Audit Report.pdf", "Bitcoin SB Audit Report.pdf", "CGU TOKEN AUDIT REPORT.pdf", "CIRUS TOKEN AUDIT REPORT.pdf", "CORNUCOPIAS TOKEN AUDIT REPORT.pdf", "COVER COMPARED TOKEN AUDIT REPORT.pdf", "CRYPTIA TOKEN AUDIT REPORT.pdf", "CRYPTO STAKE TOKEN AUDIT REPORT.pdf", "ChronoTech TOKEN AUDIT REPORT .pdf", "Ex-Sports TOKEN AUDIT REPORT.pdf", "FTE TOKEN AUDIT REPORT.pdf", "FTE TOKEN STAKING DAPP AUDIT REPORT.pdf", "FTS TOKEN AUDIT REPORT.pdf", "Forbitspace Token Audit Report.pdf", "GUNSTAR TOKEN AUDIT REPORT .pdf", "GameFi Audit Report.pdf", "HEROVERSE TOKEN AUDIT REPORT .pdf", "LESS TOKEN AUDIT REPORT .pdf", "MAFAGAFO TOKEN AUDIT REPORT.pdf", "MATE TOKEN AUDIT REPORT.pdf", "MDEX TOKEN AUDIT REPORT.pdf", "MECH MASTER TOKEN AUDIT REPORT.pdf", "METAWARS TOKEN AUDIT REPORT.pdf", "MONSTERS CLAN TOKEN AUDIT REPORT.pdf", "MORBEX TOKEN AUDIT REPORT.pdf", "Madhouse Token Audit Report.pdf", "NAC Foundation Vesting AUDIT Report .pdf", "NAC Reward Withdraw Audit Report.pdf", "NAC Token Audit Report.pdf", "OMG Network Audit Report.pdf", "POLKALOKR TOKEN AUDIT REPORT.pdf", "SEKURITANCE TOKEN AUDIT REPORT.pdf", "SHKOOBIINU TOKEN AUDIT REPORT.pdf", "STUDENT COIN AUDIT REPORT .pdf", "SafeMoon Audit Report.pdf", "SafePal Audit Report.pdf", "ShibaSwap Audit Report.pdf", "SyncDAO Audit Report .pdf", "TRICKLE TOKEN AUDIT REPORT.pdf", "TeraBlock Token Audit Report.pdf", "The Truth Audit Report.pdf", "Titan Hunters Token Audit Report .pdf", "Tr3zor TOKEN AUDIT REPORT.pdf", "UNORE TOKEN AUDIT REPORT.pdf", "Unicrypt Audit Report.pdf", "VMATES TOKEN AUDIT REPORT.pdf", "ZKSwap Audit Report.pdf", "_NAC Period Staking Farm AUDIT Report .pdf"];
+  const reports = names.map(name => ({name, path: name}));
+  function render() {
+    const q = search.value.trim().toLowerCase();
+    const shown = reports.filter(r => r.name.toLowerCase().includes(q));
+    list.replaceChildren();
+    if (!shown.length) { status.textContent = 'No reports match your search.'; return; }
+    status.textContent = shown.length + ' of ' + reports.length + ' reports shown';
+    shown.forEach(r => {
+      const row = document.createElement('div');
+      row.style.cssText = 'padding:15px 0;border-bottom:1px solid var(--line)';
+      const a = document.createElement('a');
+      a.href = 'https://github.com/' + repo + '/blob/main/' + encodeURIComponent(r.path).replace(/%2F/g, '/');
+      a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = r.name;
+      a.style.cssText = 'font-weight:600;overflow-wrap:anywhere';
+      const detail = document.createElement('p');
+      detail.textContent = 'PDF audit report · opens in new tab';
+      detail.style.cssText = 'margin:6px 0 0;color:var(--muted);font-size:14px;overflow-wrap:anywhere';
+      row.append(a, detail); list.append(row);
+    });
+  }
+  search.addEventListener('input', render);
+  render();
+})();
+</script><footer class="footer premium-footer">
   <div class="footer-glow" aria-hidden="true"></div>
   <div class="wrap">
     <div class="footer-topline">

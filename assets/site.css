@@ -345,3 +345,50 @@ button,a { -webkit-tap-highlight-color: rgba(25,200,245,.16); }
   .premium-footgrid > div { grid-column:1/-1; }
   .statrow { grid-template-columns:1fr; }
 }
+
+
+/* Mobile market layout fixes: left-align heading and prevent symbol overlap */
+@media (max-width: 720px) {
+  .ticker .wrap { width: calc(100% - 28px); margin-inline: auto; }
+  .market-heading { width: 100%; align-items: flex-start !important; text-align: left !important; }
+  .market-heading > div { width: 100%; min-width: 0; text-align: left !important; }
+  .market-heading .eyebrow { text-align: left; letter-spacing: .14em; overflow-wrap: anywhere; }
+  .market-heading h2 { text-align: left; }
+  .market-live { width: 100%; text-align: left; justify-content: flex-start; overflow-wrap: anywhere; }
+  .ticker-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+  .coin { min-width: 0; padding: 13px 11px; }
+  .coin-top { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 7px; }
+  .coin-identity { min-width: 0; width: 100%; gap: 7px; }
+  .coin-identity b { white-space: normal; overflow-wrap: anywhere; font-size: 13px; line-height: 1.2; }
+  .coin-pair { display: block; margin-left: 41px; white-space: nowrap; font-size: 10px; line-height: 1.2; }
+  .coin-price { white-space: nowrap; font-size: clamp(17px, 4.4vw, 23px); }
+  .volume-block { min-width: 0; }
+  .volume-block b { display: block; overflow-wrap: anywhere; }
+}
+@media (max-width: 380px) {
+  .ticker-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .coin { padding: 11px 9px; }
+  .coin-icon { width: 30px; height: 30px; flex-basis: 30px; }
+  .coin-pair { margin-left: 37px; font-size: 9px; }
+  .coin-price { font-size: 17px; }
+  .coin-bottom { gap: 4px; }
+  .sparkline { width: 38px; flex-basis: 38px; }
+}
+
+
+/* Mobile brand and trust-line layout: keep words together and align cleanly. */
+.hero-brandline{display:flex;flex-direction:column;align-items:flex-start;gap:5px;line-height:1.35;letter-spacing:.16em}
+.hero-brandline .hero-brandname{color:#eaf5ff;letter-spacing:.18em}
+.status{display:flex;align-items:flex-start;gap:10px;line-height:1.6}
+.status-copy{display:inline;min-width:0}
+.status-team{font-weight:800;letter-spacing:.08em}
+.status-promise{color:#a8bfd6}
+@media(max-width:600px){
+  .hero-brandline{font-size:10px;letter-spacing:.11em;gap:4px;max-width:100%;overflow-wrap:anywhere}
+  .hero-brandline .hero-brandname{font-size:11px;letter-spacing:.16em}
+  .status{font-size:10px;gap:8px;align-items:flex-start}
+  .status-copy{display:flex;flex-direction:column;align-items:flex-start;gap:3px;line-height:1.55}
+  .status-divider{display:none}
+  .status-team{font-size:10px;letter-spacing:.07em}
+  .status-promise{font-size:11px;overflow-wrap:anywhere}
+}
